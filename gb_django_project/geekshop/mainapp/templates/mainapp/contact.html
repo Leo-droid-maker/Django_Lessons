@@ -1,0 +1,12 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+{% block content %}
+<div class="hero">
+    {% include 'mainapp/includes/inc_main_menu.html' %}
+    <h1>наши контакты</h1>
+</div>
+
+<div class="location">
+    {% include 'mainapp/includes/inc_contacts_list.html' %}
+</div>
+{% endblock %}

@@ -1,0 +1,6 @@
+[
+  {"city": "Moscow", "phone": "+7-888-888-8888", "email": "info@geekshop.ru", "address":  "В пределах МКАД"},
+  {"city": "St-Petersburg", "phone": "+7-812-000-8888", "email": "info@geekshop.ru", "address":  "В пределах КАД"},
+  {"city": "Moscow", "phone": "+7-888-888-1111", "email": "info@geekshop.ru", "address":  "Балашиха"},
+  {"city": "Kazan", "phone": "+7-315-000-1111", "email": "info@geekshop.ru", "address":  "В пределах города"}
+]

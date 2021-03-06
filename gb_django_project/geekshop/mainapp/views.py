@@ -1,34 +1,35 @@
 from django.shortcuts import render
 import json
 from geekshop.settings import BASE_DIR
+from mainapp.models import Product, ProductCategory
+from random import shuffle
 
 
 # Create your views here.
 
 def main(request):
+
+    products = Product.objects.all()[:4]
+
     menu_list = [
         {'href': 'main_popular', 'name': 'популярные'},
         {'href': 'main_new', 'name': 'новинки'}
     ]
     content = {
         'title': 'Главная',
-        'menu_list': menu_list
+        'menu_list': menu_list,
+        'products': products
     }
     return render(request, 'mainapp/index.html', content)
 
 
-def products(request):
-    links_menu = [
-        {'href': 'products_all', 'name': 'все'},
-        {'href': 'products_home', 'name': 'дом'},
-        {'href': 'products_office', 'name': 'офис'},
-        {'href': 'products_modern', 'name': 'модерн'},
-        {'href': 'products_classic', 'name': 'классика'}
-
-    ]
+def products(request, pk=None):
+    list_of_products = Product.objects.all()[4:7]
+    links_menu = ProductCategory.objects.all()
     content = {
         'title': 'Товары',
-        'links_menu': links_menu
+        'links_menu': links_menu,
+        'list_of_products': list_of_products
     }
     return render(request, 'mainapp/products.html', content)
 

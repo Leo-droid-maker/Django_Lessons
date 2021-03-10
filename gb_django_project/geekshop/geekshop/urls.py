@@ -27,6 +27,7 @@ urlpatterns = [
     path("popular/", mainapp.main, name='main_popular'),
     path("new/", mainapp.main, name='main_new'),
 
+    path('auth/', include('authapp.urls', namespace='auth')),
 
     path('admin/', admin.site.urls),
 ]

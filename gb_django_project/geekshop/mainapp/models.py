@@ -22,3 +22,13 @@ class Product(models.Model):
 
     def __str__(self):
         return f'{self.name} ({self.category.name})'
+
+
+class Contact(models.Model):
+    city = models.CharField(max_length=128, verbose_name='город')
+    phone = models.CharField(max_length=128, verbose_name='телефон')
+    email = models.CharField(max_length=128, verbose_name='имейл')
+    address = models.CharField(max_length=300, verbose_name='адрес')
+
+    def __str__(self):
+        return

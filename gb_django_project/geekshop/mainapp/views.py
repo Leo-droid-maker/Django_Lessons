@@ -1,7 +1,7 @@
 from django.shortcuts import render
 import json
-from geekshop.settings import BASE_DIR
-from mainapp.models import Product, ProductCategory
+from django.conf import settings
+from mainapp.models import Product, ProductCategory, Contact
 from random import shuffle
 
 
@@ -35,9 +35,9 @@ def products(request, pk=None):
 
 
 def contact(request):
-    with open(BASE_DIR / 'contacts_list.json', 'r', encoding='utf-8') as f:
-        contacts = json.load(f)
-
+    # with open(settings.BASE_DIR / 'contacts_list.json', 'r', encoding='utf-8') as f:
+    #     contacts = json.load(f)
+    contacts = Contact.objects.all()
     content = {
         'title': 'Контакты',
         'contacts': contacts

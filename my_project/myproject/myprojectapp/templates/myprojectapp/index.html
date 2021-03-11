@@ -1,0 +1,193 @@
+{% extends 'myprojectapp/base.html' %}
+{% load static %}
+{% block content %}
+	<!-- banner -->
+	<div class="banner">
+			<!-- banner Slider starts Here -->
+					<script src="{% static 'js/responsiveslides.min.js'%}"></script>
+					 <script>
+						// You can also use "$(window).load(function() {"
+						$(function () {
+						  // Slideshow 4
+						  $("#slider3").responsiveSlides({
+							auto: true,
+							pager: true,
+							nav: true,
+							speed: 500,
+							namespace: "callbacks",
+							before: function () {
+							  $('.events').append("<li>before event fired.</li>");
+							},
+							after: function () {
+							  $('.events').append("<li>after event fired.</li>");
+							}
+						  });
+					
+						});
+					  </script>
+					<!--//End-slider-script -->
+					<div  id="top" class="callbacks_container">
+						<ul class="rslides" id="slider3">
+							<li>
+								<div class="banner-bg">
+									<div class="container">
+										<div class="banner-info">
+											<h2>RIGHT IS WHITE.<span>LEFT IS BLACK</span></h2>
+											<p>Inspired by Brasil’s bold colors and matching up to football’s on-pitch
+												playmakers, these kicks are ready to stand out.
+											</p>
+											<a href="#">SHOP BRASIL</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="banner-bg banner-img2">
+									<div class="container">
+										<div class="banner-info">
+											<h2>RIGHT IS BLUE.<span>LEFT IS PINK</span></h2>
+											<p>Inspired by bold colors and matching up to football’s on-pitch
+												playmakers, these kicks are ready to stand out.
+											</p>
+											<a href="#">SHOP BRASIL</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="banner-bg banner-img">
+									<div class="container">
+										<div class="banner-info">
+											<h2>RIGHT IS PINK.<span>LEFT IS BLUE</span></h2>
+											<p>Inspired by Brasil’s bold colors and matching up to football’s on-pitch
+												playmakers, these Brasil’s kicks are ready to stand out.
+											</p>
+											<a href="#">SHOP BRASIL</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="banner-bg">
+									<div class="container">
+										<div class="banner-info">
+											<h2>RIGHT IS WHITE.<span>LEFT IS BLACK</span></h2>
+											<p>Inspired by bold colors and matching up to football’s on-pitch
+												playmakers, these kicks are ready to stand out.
+											</p>
+											<a href="#">SHOP BRASIL</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="banner-bg banner-img2">
+									<div class="container">
+										<div class="banner-info">
+											<h2>RIGHT IS BLUE.<span>LEFT IS PINK</span></h2>
+											<p>Inspired by Brasil’s bold colors and matching up to football’s on-pitch
+												playmakers, these kicks Brasil’s are ready to stand out.
+											</p>
+											<a href="#">SHOP BRASIL</a>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+	</div>
+	<!-- //banner -->
+	<!-- banner-bottom -->
+	<div class="banner-bottom">
+		<div class="container">
+			<div class="banner-bottom-grids">
+				{% include 'myprojectapp/includes/inc_banner_bottom_index.html' %}
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- banner-bottom -->
+	<!-- products -->
+	<div class="products">
+		<!-- container -->
+		<div class="container">
+			<div class="products-heading">
+				<h3>POPULAR PRODUCTS</h3>
+			</div>
+			<div class="products-grids">
+				{% include 'myprojectapp/includes/inc_products_grids_index.html' %}
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- // products -->
+	<!-- products-bottom -->
+	<div class="products-bottom">
+		<!-- container -->
+		<div class="container">
+			<div class="col-md-3 products-bottom-left">
+				<h3>Biruang <span>Free PSD</span></h3>
+				<p>NEQUE PORRO  
+					ERIKE SUPERUS DA
+					DOLOREM IPSUM
+					GOOD LUCK
+				</p>
+				<div class="social-icons">
+					<ul>
+						<li><a href="#" class="facebook"></a></li>
+						<li><a href="#" class="twitter"></a></li>
+						<li><a href="#" class="chrome"></a></li>
+						<li><a href="#" class="vimeo"></a></li>
+						<li><a href="#" class="rss"></a></li>
+				</div>
+			</div>
+			<div class="col-md-5">
+				<div class="products-bottom-middle">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dictum lectus 
+						sit amet varius pulvinar. Proin vitae dui tincidunt nibh facilisis pellentesque. 
+						Fusce tortor turpis, facilisis ut condimentum eu, sagittis at est.
+
+						<span>Praesent egestas posuere urna a egestas. Maecenas facilisis orci vitae ante 
+						tempor accumsan. Aenean aliquam justo ac sagittis vehicula. Nam mattis 
+						pretium odio sit amet vulputate.
+						</span>
+						
+						Quisque non lobortis orci. Morbi augue mauris, ultrices at fermentum ac, 
+						consequat vitae magna. Pellentesque non cursus mi, eu cursus nunc. Nullam
+						 et odio tristique, volutpat urna vitae, dignissim orci. Fusce eu nulla urna.
+						This template was created by Erik Padamans.
+					</p>
+				</div>
+			</div>
+			<div class="col-md-4 map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d2176.1155758807386!2d24.1204355!3d56.946821099999994!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1426480456493" frameborder="0" style="border:0"></iframe>
+				<div class="location">
+					<p>Stacijas laukums 2, Riga</p>
+				</div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<!-- //container-->
+	</div>
+	<!-- //products-bottom -->
+	<!-- sign-up -->
+	<div class="sign-up">
+		<!-- container -->
+		<div class="container">
+			<div class="sign-up-left">
+				<p><span>Sign up</span> for exclusive sales and product news</p>
+			</div>
+			<div class="sign-up-right">
+				<form>
+					<input type="text" value="eony321v@gmail.com" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'eony321v@gmail.com';}" required="">
+					<input type="submit" value="sign up">
+				</form>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- //sign-up -->
+
+{% endblock %}

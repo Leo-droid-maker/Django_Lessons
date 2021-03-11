@@ -1,0 +1,12 @@
+{% load static %}
+
+{% for banner in bottom_banners %}
+    <div class="col-md-4 bottom-grid">
+        <img src="/media/{{ banner.image }}" alt="{{ banner.name }}"/>
+        <div class="bottom-grid-info">
+            <a href="#">{{ banner.name }}</a>
+            <p>{{ banner.description }}
+            </p>
+        </div>
+    </div>
+{% endfor %}

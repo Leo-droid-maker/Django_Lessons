@@ -1,0 +1,56 @@
+[
+  {
+    "category": "дом",
+    "name": "комфорт 1",
+    "image": "products_images/product-1.jpg",
+    "short_desc": "комфортный стул",
+    "description": "подойдет для просмотра фильмов",
+    "price": "2989.5",
+    "quantity": "17"
+  },
+  {
+    "category": "офис",
+    "name": "комфорт 2",
+    "image": "products_images/product-2.jpg",
+    "short_desc": "комфортный стул",
+    "description": "подойдет для общения с друзьями",
+    "price": "5000.5",
+    "quantity": "17"
+  },
+  {
+    "category": "дом",
+    "name": "комфорт 3",
+    "image": "products_images/product-3.jpg",
+    "short_desc": "комфортный стул",
+    "description": "для ленивых",
+    "price": "3242.5",
+    "quantity": "17"
+  },
+  {
+    "category": "модерн",
+    "name": "комфорт 4",
+    "image": "products_images/product-4.jpg",
+    "short_desc": "комфортный стул",
+    "description": "для тех, кто стремится к лучшему",
+    "price": "5656.5",
+    "quantity": "17"
+  },
+  {
+    "category": "офис",
+    "name": "комфорт 5",
+    "image": "products_images/product-11.jpg",
+    "short_desc": "комфортный стул",
+    "description": "подойдет для любого офиса",
+    "price": "3999.5",
+    "quantity": "17"
+  },
+  {
+    "category": "классика",
+    "name": "комфорт 6",
+    "image": "products_images/product-21.jpg",
+    "short_desc": "комфортный стул",
+    "description": "подойдет для всякого разного",
+    "price": "2989.5",
+    "quantity": "17"
+  }
+]

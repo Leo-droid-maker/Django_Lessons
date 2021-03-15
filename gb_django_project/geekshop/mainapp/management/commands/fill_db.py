@@ -2,7 +2,6 @@ import json
 import os
 
 from django.conf import settings
-from django.contrib.auth.models import User
 from django.core.management.base import BaseCommand
 
 from authapp.models import ShopUser
@@ -10,7 +9,7 @@ from mainapp.models import ProductCategory, Product, Contact
 
 
 def load_from_json(file_name):
-    with open(os.path.join(settings.BASE_DIR, f'mainapp/json/{file_name}.json')) as f:
+    with open(os.path.join(settings.BASE_DIR, f'mainapp/json/{file_name}.json'), 'r', encoding='utf-8') as f:
         return json.load(f)
 
 

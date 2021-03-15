@@ -58,7 +58,7 @@
             <a class="explore" href="#">показать все <img src="{% static 'img/arrow.png' %}" alt=""></a>
         </div>
         <div class="related-products clearfix">
-            {% for product in list_of_products %}
+            {% for product in products %}
             <div class="block">
                 <a href="#"><img src="/media/{{ product.image }}" alt="{{ product.name }}">
                     <div class="text">

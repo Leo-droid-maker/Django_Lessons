@@ -22,15 +22,16 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', views.main, name='main'),
     path('about/', views.about, name='about'),
-    path('add-to-cart/', views.cart, name='cart'),
+    path('cart/', include('cartapp.urls', namespace='cart')),
     path('men/', include('myprojectapp.urls', namespace='men')),
     path('women/', views.women, name='women'),
     path('single/', views.single, name='single'),
     path('404/', views.page404, name='404'),
 
+    path('auth/', include('authapp.urls', namespace='auth')),
+
     path('admin/', admin.site.urls),
 ]
-
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

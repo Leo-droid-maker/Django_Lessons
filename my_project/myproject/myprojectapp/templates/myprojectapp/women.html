@@ -1,172 +1,190 @@
 {% extends 'myprojectapp/base.html' %}
 {% load static %}
 {% block content %}
-	<!-- men -->
-	<div class="men">
-		<!-- container -->
-		<div class="container">
-			<div class="col-md-9 fashions">
-				<div class="title">
-					<h3>TOPS - TITLE</h3>
-				</div>
-				<div class="fashion-section">
-					<div class="fashion-grid1">
-						 <div class="col-md-3 fashion-grid">
-							 <a href="{% url 'single' %}"><img src="{% static 'images/t7.jpg'%}" alt=""/>
-								 <div class="product">
-									 <h3>PRODUCT NAME</h3>
-									 <p><span></span> 176.00 &euro;</p>								 
-								 </div>							 
-							 </a>
-							 <div class="fashion-view"><span></span>
-										<div class="clearfix"></div>
-									 <h4><a href="{% url 'single' %}">Quick View</a></h4>
-							 </div>
-						 </div>
-						 <div class="col-md-3 fashion-grid">
-							 <a href="{% url 'single' %}"><img src="{% static 'images/t8.jpg'%}" alt=""/>
-								 <div class="product">
-									 <h3>PRODUCT NAME</h3>
-									 <p><span></span> 176.00 &euro;</p>
-								 </div>
-							 </a>
-							 <div class="fashion-view"><span></span>
-										<div class="clearfix"></div>
-									 <h4><a href="{% url 'single' %}">Quick View</a></h4>
-							 </div>
-						 </div>
-						 <div class="col-md-3 fashion-grid">
-							 <a href="{% url 'single' %}"><img src="{% static 'images/t10.jpg'%}" alt=""/>
-								 <div class="product not-avaliable">
-									 <h3>PRODUCT NAME</h3>
-									 <p><del><span></span> 176.00 &euro;</del></p>
-								 </div>
-							 </a>
-							 <div class="fashion-view"><span></span>
-										<div class="clearfix"></div>
-									 <h4 class="sold-out"><a href="{% url 'single' %}"><del>Sold Out</del></a></h4>
-							 </div>
-						 </div>
-						 <div class="col-md-3 fashion-grid">
-							 <a href="{% url 'single' %}"><img src="{% static 'images/t18.jpg'%}" alt=""/>
-								 <div class="product not-avaliable">
-									 <h3>PRODUCT NAME</h3>
-									 <p><del><span></span> 176.00 &euro;</del></p>
-								 </div>
-							 </a>
-							 <div class="fashion-view"><span></span>
-										<div class="clearfix"></div>
-									 <h4 class="sold-out"><a href="{% url 'single' %}"><del>Sold Out</del></a></h4>
-							 </div>
-						 </div>
-						 <div class="clearfix"></div>
-					</div>
-					<div class="fashion-grid2">
-						<div class="col-md-3 fashion-grid">
-							 <a href="{% url 'single' %}"><img src="{% static 'images/t11.jpg'%}" alt=""/>
-								 <div class="product">
-									 <h3>PRODUCT NAME</h3>
-									 <p><span></span> 176.00 &euro;</p>
-								 </div>
-							 </a>
-							 <div class="fashion-view"><span></span>
-										<div class="clearfix"></div>
-									 <h4><a href="{% url 'single' %}">Quick View</a></h4>
-							 </div>
-						</div>
-						<div class="col-md-3 fashion-grid">
-							 <a href="{% url 'single' %}"><img class="img-responsive zoom-img" src="{% static 'images/t14.jpg'%}" alt=""/>
-								 <div class="product not-avaliable">
-									 <h3>PRODUCT NAME</h3>
-									 <p><del><span></span> 176.00 &euro;</del></p>
-								 </div>
-							 </a>
-							 <div class="fashion-view"><span></span>
-										<div class="clearfix"></div>
-									 <h4 class="sold-out"><a href="{% url 'single' %}"><del>Sold Out</del></a></h4>
-							 </div>
-						</div>
-						<div class="col-md-3 fashion-grid">
-							 <a href="{% url 'single' %}"><img src="{% static 'images/t9.jpg'%}" alt=""/>
-								 <div class="product">
-									 <h3>PRODUCT NAME</h3>
-									 <p><span></span> 176.00 &euro;</p>
-								 </div>
-							 </a>
-							 <div class="fashion-view"><span></span>
-										<div class="clearfix"></div>
-									 <h4><a href="{% url 'single' %}">Quick View</a></h4>
-							 </div>
-						</div>
-						<div class="col-md-3 fashion-grid">
-							 <a href="{% url 'single' %}"><img src="{% static 'images/t12.jpg'%}" alt=""/>
-								 <div class="product">
-									 <h3>PRODUCT NAME</h3>
-									 <p><span></span> 176.00 &euro;</p>
-								 </div>
-							 </a>
-							 <div class="fashion-view"><span></span>
-										<div class="clearfix"></div>
-									 <h4><a href="{% url 'single' %}">Quick View</a></h4>
-							 </div>
-						</div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="fashion-grid2">
-						<div class="col-md-3 fashion-grid">
-							 <a href="{% url 'single' %}"><img src="{% static 'images/t15.jpg'%}" alt=""/>
-								 <div class="product">
-									 <h3>PRODUCT NAME</h3>
-									 <p><span></span> 176.00 &euro;</p>
-								 </div>
-							 </a>
-							 <div class="fashion-view"><span></span>
-										<div class="clearfix"></div>
-									 <h4><a href="{% url 'single' %}">Quick View</a></h4>
-							 </div>
-						</div>
-						<div class="col-md-3 fashion-grid">
-							 <a href="{% url 'single' %}"><img class="img-responsive zoom-img" src="{% static 'images/t8.jpg'%}" alt=""/>
-								 <div class="product not-avaliable">
-									 <h3>PRODUCT NAME</h3>
-									 <p><del><span></span> 176.00 &euro;</del></p>
-								 </div>
-							 </a>
-							 <div class="fashion-view"><span></span>
-										<div class="clearfix"></div>
-									 <h4 class="sold-out"><a href="{% url 'single' %}"><del>Sold Out</del></a></h4>
-							 </div>
-						</div>
-						<div class="col-md-3 fashion-grid">
-							 <a href="{% url 'single' %}"><img src="{% static 'images/t16.jpg'%}" alt=""/>
-								 <div class="product">
-									 <h3>PRODUCT NAME</h3>
-									 <p><span></span> 176.00 &euro;</p>
-								 </div>
-							 </a>
-							 <div class="fashion-view"><span></span>
-										<div class="clearfix"></div>
-									 <h4><a href="{% url 'single' %}">Quick View</a></h4>
-							 </div>
-						</div>
-						<div class="col-md-3 fashion-grid">
-							 <a href="{% url 'single' %}"><img src="{% static 'images/t10.jpg'%}" alt=""/>
-								 <div class="product">
-									 <h3>PRODUCT NAME</h3>
-									 <p><span></span> 176.00 &euro;</p>
-								 </div>
-							 </a>
-							 <div class="fashion-view"><span></span>
-										<div class="clearfix"></div>
-									 <h4><a href="{% url 'single' %}">Quick View</a></h4>
-							 </div>
-						</div>
-						<div class="clearfix"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 side-bar">
-				<div class="categories">
+    <!-- men -->
+    <div class="men">
+        <!-- container -->
+        <div class="container">
+            <div class="col-md-9 fashions">
+                <div class="title">
+                    <h3>TOPS - TITLE</h3>
+                </div>
+                <div class="fashion-section">
+                    <div class="fashion-grid1">
+                        <div class="col-md-3 fashion-grid">
+                            <a href="{% url 'single' %}"><img src="{% static 'images/t7.jpg' %}" alt=""/>
+                                <div class="product">
+                                    <h3>PRODUCT NAME</h3>
+                                    <p><span></span> 176.00 &euro;</p>
+                                </div>
+                            </a>
+                            <div class="fashion-view"><span></span>
+                                <div class="clearfix"></div>
+                                <h4><a href="{% url 'single' %}">Quick View</a></h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 fashion-grid">
+                            <a href="{% url 'single' %}"><img src="{% static 'images/t8.jpg' %}" alt=""/>
+                                <div class="product">
+                                    <h3>PRODUCT NAME</h3>
+                                    <p><span></span> 176.00 &euro;</p>
+                                </div>
+                            </a>
+                            <div class="fashion-view"><span></span>
+                                <div class="clearfix"></div>
+                                <h4><a href="{% url 'single' %}">Quick View</a></h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 fashion-grid">
+                            <a href="{% url 'single' %}"><img src="{% static 'images/t10.jpg' %}" alt=""/>
+                                <div class="product not-avaliable">
+                                    <h3>PRODUCT NAME</h3>
+                                    <p>
+                                        <del><span></span> 176.00 &euro;</del>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="fashion-view"><span></span>
+                                <div class="clearfix"></div>
+                                <h4 class="sold-out"><a href="{% url 'single' %}">
+                                    <del>Sold Out</del>
+                                </a></h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 fashion-grid">
+                            <a href="{% url 'single' %}"><img src="{% static 'images/t18.jpg' %}" alt=""/>
+                                <div class="product not-avaliable">
+                                    <h3>PRODUCT NAME</h3>
+                                    <p>
+                                        <del><span></span> 176.00 &euro;</del>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="fashion-view"><span></span>
+                                <div class="clearfix"></div>
+                                <h4 class="sold-out"><a href="{% url 'single' %}">
+                                    <del>Sold Out</del>
+                                </a></h4>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="fashion-grid2">
+                        <div class="col-md-3 fashion-grid">
+                            <a href="{% url 'single' %}"><img src="{% static 'images/t11.jpg' %}" alt=""/>
+                                <div class="product">
+                                    <h3>PRODUCT NAME</h3>
+                                    <p><span></span> 176.00 &euro;</p>
+                                </div>
+                            </a>
+                            <div class="fashion-view"><span></span>
+                                <div class="clearfix"></div>
+                                <h4><a href="{% url 'single' %}">Quick View</a></h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 fashion-grid">
+                            <a href="{% url 'single' %}"><img class="img-responsive zoom-img"
+                                                              src="{% static 'images/t14.jpg' %}" alt=""/>
+                                <div class="product not-avaliable">
+                                    <h3>PRODUCT NAME</h3>
+                                    <p>
+                                        <del><span></span> 176.00 &euro;</del>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="fashion-view"><span></span>
+                                <div class="clearfix"></div>
+                                <h4 class="sold-out"><a href="{% url 'single' %}">
+                                    <del>Sold Out</del>
+                                </a></h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 fashion-grid">
+                            <a href="{% url 'single' %}"><img src="{% static 'images/t9.jpg' %}" alt=""/>
+                                <div class="product">
+                                    <h3>PRODUCT NAME</h3>
+                                    <p><span></span> 176.00 &euro;</p>
+                                </div>
+                            </a>
+                            <div class="fashion-view"><span></span>
+                                <div class="clearfix"></div>
+                                <h4><a href="{% url 'single' %}">Quick View</a></h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 fashion-grid">
+                            <a href="{% url 'single' %}"><img src="{% static 'images/t12.jpg' %}" alt=""/>
+                                <div class="product">
+                                    <h3>PRODUCT NAME</h3>
+                                    <p><span></span> 176.00 &euro;</p>
+                                </div>
+                            </a>
+                            <div class="fashion-view"><span></span>
+                                <div class="clearfix"></div>
+                                <h4><a href="{% url 'single' %}">Quick View</a></h4>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="fashion-grid2">
+                        <div class="col-md-3 fashion-grid">
+                            <a href="{% url 'single' %}"><img src="{% static 'images/t15.jpg' %}" alt=""/>
+                                <div class="product">
+                                    <h3>PRODUCT NAME</h3>
+                                    <p><span></span> 176.00 &euro;</p>
+                                </div>
+                            </a>
+                            <div class="fashion-view"><span></span>
+                                <div class="clearfix"></div>
+                                <h4><a href="{% url 'single' %}">Quick View</a></h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 fashion-grid">
+                            <a href="{% url 'single' %}"><img class="img-responsive zoom-img"
+                                                              src="{% static 'images/t8.jpg' %}" alt=""/>
+                                <div class="product not-avaliable">
+                                    <h3>PRODUCT NAME</h3>
+                                    <p>
+                                        <del><span></span> 176.00 &euro;</del>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="fashion-view"><span></span>
+                                <div class="clearfix"></div>
+                                <h4 class="sold-out"><a href="{% url 'single' %}">
+                                    <del>Sold Out</del>
+                                </a></h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 fashion-grid">
+                            <a href="{% url 'single' %}"><img src="{% static 'images/t16.jpg' %}" alt=""/>
+                                <div class="product">
+                                    <h3>PRODUCT NAME</h3>
+                                    <p><span></span> 176.00 &euro;</p>
+                                </div>
+                            </a>
+                            <div class="fashion-view"><span></span>
+                                <div class="clearfix"></div>
+                                <h4><a href="{% url 'single' %}">Quick View</a></h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 fashion-grid">
+                            <a href="{% url 'single' %}"><img src="{% static 'images/t10.jpg' %}" alt=""/>
+                                <div class="product">
+                                    <h3>PRODUCT NAME</h3>
+                                    <p><span></span> 176.00 &euro;</p>
+                                </div>
+                            </a>
+                            <div class="fashion-view"><span></span>
+                                <div class="clearfix"></div>
+                                <h4><a href="{% url 'single' %}">Quick View</a></h4>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 side-bar">
+                <div class="categories">
 					<h3>CATEGORIES</h3>
 					<ul>
 						<li><a href="#">accessories</a></li>
@@ -183,30 +201,30 @@
 						<li><a href="#">watersuits</a></li>
 					</ul>
 				</div>
-				<div class="sales">
-					<h3>SALE</h3>
-					 <div class="pricing">
-						 <h4>Price range</h4>
-						 <input type="text" placeholder="price from" required/>
-						 <input type="text" placeholder="price to" required/>
-						 <div class="clearfix"></div>
-					 </div>
-					 <div class="size">
-						 <h4>Size</h4>
-						 <ul>
-							 <li><a href="#">XS</a></li>
-							 <li><a href="#">S</a></li>
-							 <li><a href="#">M</a></li>
-							 <li><a href="#">L</a></li>
-							 <li><a href="#">XL</a></li>
-						 </ul>
-					 </div>
-				</div>
-			</div>
+                <div class="sales">
+                    <h3>SALE</h3>
+                    <div class="pricing">
+                        <h4>Price range</h4>
+                        <input type="text" placeholder="price from" required/>
+                        <input type="text" placeholder="price to" required/>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="size">
+                        <h4>Size</h4>
+                        <ul>
+                            <li><a href="#">XS</a></li>
+                            <li><a href="#">S</a></li>
+                            <li><a href="#">M</a></li>
+                            <li><a href="#">L</a></li>
+                            <li><a href="#">XL</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-			<div class="clearfix"> </div>
-		</div>
-		<!-- //container -->
-	</div>
-	<!-- //men -->
+            <div class="clearfix"></div>
+        </div>
+        <!-- //container -->
+    </div>
+    <!-- //men -->
 {% endblock %}

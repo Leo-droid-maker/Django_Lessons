@@ -28,6 +28,9 @@ class Product(models.Model):
     price = models.DecimalField(verbose_name='price', max_digits=8, decimal_places=2, default=0)
     quantity = models.PositiveSmallIntegerField(verbose_name='quantity', default=0)
     size = models.CharField(max_length=4, verbose_name='size', blank=True)
+    gender = models.CharField(max_length=20, verbose_name='gender', blank=True)
+    is_popular = models.BooleanField(verbose_name='popular product', default=False)
+    is_new = models.BooleanField(verbose_name='new_product', default=False)
 
     def __str__(self):
         return f'{self.name} ({self.category.name})'

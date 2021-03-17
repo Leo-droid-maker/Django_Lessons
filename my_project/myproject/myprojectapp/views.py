@@ -12,7 +12,8 @@ def main(request):
     content = {
         'title': 'home',
         'products': products,
-        'bottom_banners': bottom_banners
+        'bottom_banners': bottom_banners,
+        'cart': get_cart(request.user)
     }
 
     return render(request, 'myprojectapp/index.html', content)
@@ -20,16 +21,19 @@ def main(request):
 
 def about(request):
     content = {
-        'title': 'about'
+        'title': 'about',
+        'cart': get_cart(request.user)
     }
     return render(request, 'myprojectapp/about.html', content)
 
 
-def men(request, pk=None):
-    cart = 0
+def get_cart(user):
+    if user.is_authenticated:
+        return Cart.objects.filter(user=user)
+    return []
 
-    if request.user.is_authenticated:
-        cart = sum(list(Cart.objects.filter(user=request.user).values_list('quantity', flat=True)))
+
+def men(request, pk=None):
 
     categories_menu = ProductCategory.objects.all()
 
@@ -46,7 +50,7 @@ def men(request, pk=None):
             'categories_menu': categories_menu,
             'men_products': men_products,
             'category_item': category_item,
-            'cart': cart
+            'cart': get_cart(request.user)
         }
         return render(request, 'myprojectapp/men.html', content)
 
@@ -55,7 +59,7 @@ def men(request, pk=None):
         'title': 'men',
         'categories_menu': categories_menu,
         'men_products': same_men_products,
-        'cart': cart
+        'cart': get_cart(request.user)
     }
     return render(request, 'myprojectapp/men.html', content)
 
@@ -64,20 +68,23 @@ def women(request):
     women_products = Product.objects.all().filter(gender='female')
     content = {
         'title': 'women',
-        'women_products': women_products
+        'women_products': women_products,
+        'cart': get_cart(request.user)
     }
     return render(request, 'myprojectapp/women.html', content)
 
 
 def single(request):
     content = {
-        'title': 'single'
+        'title': 'single',
+        'cart': get_cart(request.user)
     }
     return render(request, 'myprojectapp/single.html', content)
 
 
 def page404(request):
     content = {
-        'title': '404'
+        'title': '404',
+        'cart': get_cart(request.user)
     }
     return render(request, 'myprojectapp/404.html', content)

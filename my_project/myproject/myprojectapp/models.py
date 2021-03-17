@@ -37,6 +37,7 @@ class Product(models.Model):
 
 
 class BottomBanners(models.Model):
+    category = models.ForeignKey(ProductCategory, on_delete=models.CASCADE, null=True)
     name = models.CharField(max_length=64, verbose_name='bottom banner on index', unique=True)
     image = models.ImageField(upload_to='banner_images', blank=True)
     description = models.TextField(blank=True, verbose_name='banner description')

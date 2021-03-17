@@ -59,7 +59,7 @@ html, body {
 .basket_list .basket_record {
     position: relative;
     display: block;
-    height: 170px;
+    height: 250px;
     float: none;
 }
 

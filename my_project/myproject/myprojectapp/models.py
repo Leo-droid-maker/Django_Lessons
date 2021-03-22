@@ -14,6 +14,7 @@ class PageCategories(models.Model):
 class ProductCategory(models.Model):
     name = models.CharField(max_length=64, verbose_name='category name', unique=True)
     description = models.TextField(verbose_name='description of page', blank=True)
+    is_active = models.BooleanField(verbose_name='activity', default=True)
 
     def __str__(self):
         return self.name
@@ -31,6 +32,7 @@ class Product(models.Model):
     gender = models.CharField(max_length=20, verbose_name='gender', blank=True)
     is_popular = models.BooleanField(verbose_name='popular product', default=False)
     is_new = models.BooleanField(verbose_name='new_product', default=False)
+    is_active = models.BooleanField(verbose_name='activity', default=True)
 
     def __str__(self):
         return f'{self.name} ({self.category.name})'

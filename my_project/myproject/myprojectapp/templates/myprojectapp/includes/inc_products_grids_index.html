@@ -5,7 +5,7 @@
     <div class="col-md-3 product-left-grid">
         <div class="product-grid">
             <div class="product-grid-text">
-                <a href="{% url 'single' %}"><img src="/media/{{ product.image }}" alt="{{ product.name }}"/></a>
+                <a href="{% url 'single:product' product.pk %}"><img src="/media/{{ product.image }}" alt="{{ product.name }}"/></a>
                 <div class="products-grid-info">
                     <h3>{{ product.name }}</h3>
                     <h4>{{ product.short_desc }}</h4>
@@ -20,7 +20,7 @@
                     <div class="clearfix"></div>
                 </div>
                 <div class="plus">
-                    <a href="{% url 'single' %}"><img src="{% static 'images/plus.png' %}" alt=""/></a>
+                    <a href="{% url 'single:product' product.pk %}"><img src="{% static 'images/plus.png' %}" alt=""/></a>
                 </div>
             </div>
         </div>

@@ -11,35 +11,35 @@
                         <ul id="etalage" class="etalage" style="display: block; width: 300px; height: 533px;">
                             <li class="etalage_thumb thumb_1"
                                 style="display: none; opacity: 0; background-image: none;">
-                                <img class="etalage_thumb_image" src="{% static 'images/d1.jpg' %}"
+                                <img class="etalage_thumb_image" src="/media/{{ product.image }}"
                                      style="display: inline; width: 300px; height: 400px; opacity: 1;">
-                                <img class="etalage_source_image" src="{% static 'images/d1.jpg' %}" title="">
+                                <img class="etalage_source_image" src="/media/{{ product.image }}" title="">
                             </li>
                             <li class="etalage_thumb thumb_2"
                                 style="display: none; opacity: 0; background-image: none;">
-                                <img class="etalage_thumb_image" src="{% static 'images/d2.jpg' %}"
+                                <img class="etalage_thumb_image" src="/media/{{ product.image }}"
                                      style="display: inline; width: 300px; height: 400px; opacity: 1;">
-                                <img class="etalage_source_image" src="{% static 'images/d2.jpg' %}" title="">
+                                <img class="etalage_source_image" src="/media/{{ product.image }}}" title="">
                             </li>
                             <li class="etalage_thumb thumb_3"
                                 style="display: none; opacity: 0; background-image: none;">
-                                <img class="etalage_thumb_image" src="{% static 'images/d3.jpg' %}"
+                                <img class="etalage_thumb_image" src="/media/{{ product.image }}"
                                      style="display: inline; width: 300px; height: 400px; opacity: 1;">
-                                <img class="etalage_source_image" src="{% static 'images/d3.jpg' %}">
+                                <img class="etalage_source_image" src="/media/{{ product.image }}">
                             </li>
                             <li class="etalage_thumb thumb_4 etalage_thumb_active"
                                 style="display: list-item; opacity: 1; background-image: none;">
-                                <img class="etalage_thumb_image" src="{% static 'images/d4.jpg' %}"
+                                <img class="etalage_thumb_image" src="/media/{{ product.image }}"
                                      style="display: inline; width: 300px; height: 400px; opacity: 1;">
-                                <img class="etalage_source_image" src="{% static 'images/d4.jpg' %}">
+                                <img class="etalage_source_image" src="/media/{{ product.image }}">
                             </li>
                             <div class="clearfix"></div>
                     </div>
                     <div class="single-left-right">
                         <div class="single-left-info">
-                            <h3>PRODUCT NAME HERE</h3>
-                            <a href="#" class="view">View product details</a>
-                            <p>$ 20 <a href="#" class="view">CLICK FOR OFFER</a></p>
+                            <h3>{{ product.name }}</h3>
+                            <a href="#" class="view">{{ product.short_desc }}</a>
+                            <p>$ {{ product.price|floatformat:1 }}<a href="#" class="view">CLICK FOR OFFER</a></p>
                         </div>
                         <div class="select-size">
                             <p>Select a size</p>
@@ -50,7 +50,7 @@
                                 <li><a href="#">XL</a></li>
                             </ul>
                             <div class="buy-now">
-                                <a href="#">BYE NOW</a>
+                                <a href="{% url 'cart:add_to_cart' product.pk %}">BYE NOW</a>
                             </div>
                             <div class="wishlist">
                                 <a class="play-icon popup-with-zoom-anim" href="#small-dialog2">Add to Wishlist</a>
@@ -128,12 +128,7 @@
                     <div class="clearfix"></div>
                     <div class="product-details">
                         <h3>PRODUCT DETAILS</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a est at leo dictum
-                            pharetra vel sit amet tellus. Vivamus vitae enim sit amet orci euismod consequat.
-                            Nulla porttitor vitae arcu ut porttitor. Pellentesque auctor enim eros, et malesuada
-                            ipsum suscipit quis. Aliquam sed ex risus. Etiam hendrerit velit luctus facilisis
-                            mollis. Integer auctor consequat est. Integer viverra fringilla finibus. Nunc id
-                            dignissim enim.
+                        <p>{{ product.description }}
                         </p>
                     </div>
                     <div class="related">
@@ -202,27 +197,27 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 side-bar">
-                    <div class="categories">
-                        <h3>CATEGORIES</h3>
-                        <ul>
-                            <li><a href="#">accessories</a></li>
-                            <li><a href="#">basics</a></li>
-                            <li><a href="#">jackets</a></li>
-                            <li><a href="#">jeans</a></li>
-                            <li><a href="#">knits</a></li>
-                            <li><a href="#">overalls</a></li>
-                            <li><a href="#">over coats</a></li>
-                            <li><a href="#">shoes</a></li>
-                            <li><a href="#">sweatshirts</a></li>
-                            <li><a href="#">trousers</a></li>
-                            <li><a href="#">
-                                <del>tops</del>
-                            </a></li>
-                            <li><a href="#">watersuits</a></li>
-                        </ul>
-                    </div>
-                </div>
+{#                <div class="col-md-3 side-bar">#}
+{#                    <div class="categories">#}
+{#                        <h3>CATEGORIES</h3>#}
+{#                        <ul>#}
+{#                            <li><a href="#">accessories</a></li>#}
+{#                            <li><a href="#">basics</a></li>#}
+{#                            <li><a href="#">jackets</a></li>#}
+{#                            <li><a href="#">jeans</a></li>#}
+{#                            <li><a href="#">knits</a></li>#}
+{#                            <li><a href="#">overalls</a></li>#}
+{#                            <li><a href="#">over coats</a></li>#}
+{#                            <li><a href="#">shoes</a></li>#}
+{#                            <li><a href="#">sweatshirts</a></li>#}
+{#                            <li><a href="#">trousers</a></li>#}
+{#                            <li><a href="#">#}
+{#                                <del>tops</del>#}
+{#                            </a></li>#}
+{#                            <li><a href="#">watersuits</a></li>#}
+{#                        </ul>#}
+{#                    </div>#}
+{#                </div>#}
                 <div class="clearfix"></div>
             </div>
         </div>

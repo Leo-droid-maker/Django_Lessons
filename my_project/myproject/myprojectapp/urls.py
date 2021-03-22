@@ -5,7 +5,7 @@ from myprojectapp import views
 app_name = 'myprojectapp'
 
 urlpatterns = [
-    path('', views.men, name='men'),
-    path('<int:pk>/', views.men, name='men_category'),
+    path('', views.main, name='single'),
+    path('product/<int:pk>/', views.single, name='product'),
 ]
 

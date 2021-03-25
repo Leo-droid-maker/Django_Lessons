@@ -2,6 +2,7 @@
 {% block content %}
     <form action="{% url 'auth:login' %}" method="post" class="form-horizontal">
         {% csrf_token %}
+        <input type="hidden" name="next" value="{{ next }}">
         {{ login_form.as_p }}
         <input type="submit" value="войти" class="form-control" />
     </form>

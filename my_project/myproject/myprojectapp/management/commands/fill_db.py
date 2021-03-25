@@ -23,6 +23,8 @@ class Command(BaseCommand):
         bottom_banners = load_from_json('products_for_bottom_banner')
         BottomBanners.objects.all().delete()
         for banner in bottom_banners:
+            _category = ProductCategory.objects.get(name=banner['category'])
+            banner['category'] = _category
             BottomBanners.objects.create(**banner)
 
         products = load_from_json('products')

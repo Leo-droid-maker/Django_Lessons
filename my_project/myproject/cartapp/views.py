@@ -23,7 +23,7 @@ def cart(request):
 @login_required
 def cart_add(request, pk):
     if 'login' in request.META.get('HTTP_REFERER'):
-        return HttpResponseRedirect(reverse('men:men', args=[pk]))
+        return HttpResponseRedirect(reverse('single:product', args=[pk]))
 
     product_item = get_object_or_404(Product, pk=pk)
     cart_item = Cart.objects.filter(product=product_item, user=request.user).first()

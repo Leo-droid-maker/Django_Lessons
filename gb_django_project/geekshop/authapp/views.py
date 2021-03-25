@@ -18,8 +18,11 @@ def login(request):
         password = request.POST['password']
         user = auth.authenticate(username=username, password=password)
         if user and user.is_active:
+            print(request.POST)
             auth.login(request, user)
             if 'next' in request.POST:
+                print('here ---', request.GET)
+                print('here is ----', request.POST['next'])
                 return HttpResponseRedirect(request.POST['next'])
             return HttpResponseRedirect(reverse('main'))
 

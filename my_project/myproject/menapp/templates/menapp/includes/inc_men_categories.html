@@ -1,9 +1,9 @@
 <div class="categories">
     <h3>CATEGORIES</h3>
     <ul>
-        <a href="{% url 'myprojectapp:men_category' 0 %}">
+        <li><a href="{% url 'men:men_category' 0 %}">
             all
-        </a>
+        </a></li>
         {% for category in categories_menu %}
             <li><a href="{% url 'men:men_category' category.pk %}">{{ category.name }}</a></li>
         {% endfor %}

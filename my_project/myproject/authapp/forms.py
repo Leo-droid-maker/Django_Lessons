@@ -20,15 +20,21 @@ class ShopUserRegisterForm(UserCreationForm):
         fields = ('username', 'email', 'first_name', 'age', 'avatar', 'password1', 'password2')
 
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+        super(ShopUserRegisterForm, self).__init__(*args, **kwargs)
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'form-control'
 
     def clean_age(self):
         data = self.cleaned_data['age']
         if data < 18:
-            raise forms.ValidationError('Age is under 18')
+            raise forms.ValidationError('Ваш возраст меньше 18 лет')
         return data
+
+    # def clean_email(self):
+    #     data = self.cleaned_data['email']
+    #     if data in ShopUser.objects.filter(email=data).exists():
+    #         raise forms.ValidationError('такой email существует')
+    #     return data
 
 
 class ShopUserEditForm(UserChangeForm):
@@ -46,5 +52,6 @@ class ShopUserEditForm(UserChangeForm):
     def clean_age(self):
         data = self.cleaned_data['age']
         if data < 18:
-            raise forms.ValidationError('Age is under 18')
+            raise forms.ValidationError('Ваш возраст меньше 18 лет')
         return data
+

@@ -6,7 +6,7 @@ from myprojectapp.views import get_cart
 # Create your views here.
 
 def women(request, pk=None):
-    categories_menu = ProductCategory.objects.all()
+    categories_menu = ProductCategory.objects.all().filter(is_active=True)
 
     if pk is not None:
         if pk == 0:

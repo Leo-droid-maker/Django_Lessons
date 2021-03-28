@@ -1,13 +1,12 @@
 from django.shortcuts import render, get_object_or_404
-from myprojectapp.models import PageCategories, ProductCategory, Product, BottomBanners
-from cartapp.models import Cart
+from myprojectapp.models import ProductCategory, Product
 from myprojectapp.views import get_cart
 
 
 # Create your views here.
 
 def men(request, pk=None):
-    categories_menu = ProductCategory.objects.all()
+    categories_menu = ProductCategory.objects.all().filter(is_active=True)
 
     if pk is not None:
         if pk == 0:

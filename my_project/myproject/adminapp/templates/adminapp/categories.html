@@ -9,7 +9,19 @@
             </a>
         </button>
 
-        {% for object in objects %}
+        <div class="pagination">
+            {% if page_obj.has_previous %}
+                <a href="{% url 'admin:category_read' %}?page={{ page_obj.previous_page_number }}"> << </a>
+            {% endif %}
+            <span class="current">
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+            </span>
+            {% if page_obj.has_next %}
+                <a href="{% url 'admin:category_read' %}?page={{ page_obj.next_page_number }}"> >> </a>
+            {% endif %}
+        </div>
+
+        {% for object in object_list %}
             <div class="category_record {% if not object.is_active %}not_active{% endif %}">
                 <div class="category_name">
                     {{ object.name|title }}
@@ -27,13 +39,13 @@
                     </button>
                     <button>
                         {% if object.is_active %}
-                        <a href={% url 'admin:category_delete' object.pk %}>
-                            delete
-                        </a>
+                            <a href={% url 'admin:category_delete' object.pk %}>
+                                delete
+                            </a>
                         {% else %}
-                        <a href={% url 'admin:category_delete' object.pk %}>
-                            restore
-                        </a>
+                            <a href={% url 'admin:category_delete' object.pk %}>
+                                restore
+                            </a>
                         {% endif %}
                     </button>
                 </div>

@@ -20,16 +20,16 @@ def main(request):
         'title': 'Главная',
         'menu_list': menu_list,
         'products': products,
-        'basket': get_basket(request.user)
+        # 'basket': get_basket(request.user)
     }
     return render(request, 'mainapp/index.html', content)
 
 
-def get_basket(user):
-    if user.is_authenticated:
-        return Basket.objects.filter(user=user)
-        # basket = sum(list(Basket.objects.filter(user=request.user).values_list('quantity', flat=True)))
-    return []
+# def get_basket(user):
+#     if user.is_authenticated:
+#         return Basket.objects.filter(user=user)
+#         # basket = sum(list(Basket.objects.filter(user=request.user).values_list('quantity', flat=True)))
+#     return []
 
 
 def get_hot_product():
@@ -68,7 +68,7 @@ def products(request, pk=None):
             'links_menu': links_menu,
             'category': category_item,
             'products': products_paginator,
-            'basket': get_basket(request.user)
+            # 'basket': get_basket(request.user)
         }
         return render(request, 'mainapp/products_list.html', content)
 
@@ -80,7 +80,7 @@ def products(request, pk=None):
         'links_menu': links_menu,
         'products': same_products,
         'hot_product': hot_product,
-        'basket': get_basket(request.user)
+        # 'basket': get_basket(request.user)
     }
     return render(request, 'mainapp/products.html', content)
 
@@ -90,7 +90,7 @@ def product(request, pk):
     content = {
         'title': 'страница товара',
         'product': get_object_or_404(Product, pk=pk),
-        'basket': get_basket(request.user),
+        # 'basket': get_basket(request.user),
         'links_menu': links_menu,
     }
     return render(request, 'mainapp/product.html', content)
@@ -103,6 +103,6 @@ def contact(request):
     content = {
         'title': 'Контакты',
         'contacts': contacts,
-        'basket': get_basket(request.user)
+        # 'basket': get_basket(request.user)
     }
     return render(request, 'mainapp/contact.html', content)

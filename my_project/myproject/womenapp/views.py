@@ -1,6 +1,5 @@
 from django.shortcuts import render, get_object_or_404
 from myprojectapp.models import ProductCategory, Product
-from myprojectapp.views import get_cart
 
 
 # Create your views here.
@@ -21,7 +20,6 @@ def women(request, pk=None):
             'categories_menu': categories_menu,
             'women_products': women_products,
             'category_item': category_item,
-            'cart': get_cart(request.user)
         }
         return render(request, 'womenapp/women.html', content)
 
@@ -30,6 +28,5 @@ def women(request, pk=None):
         'title': 'women',
         'categories_menu': categories_menu,
         'women_products': same_women_products,
-        'cart': get_cart(request.user)
     }
     return render(request, 'womenapp/women.html', content)

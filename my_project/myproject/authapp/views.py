@@ -6,23 +6,28 @@ from django.urls import reverse
 
 
 # Create your views here.
+
 def login(request):
-    login_form = ShopUserLoginForm(data=request.POST)
+    login_form = ShopUserLoginForm(data=request.POST or None)
 
     next = request.GET.get('next', '')
+    # next = request.GET['next'] if 'next' in request.GET else ''
 
     if request.method == 'POST' and login_form.is_valid():
         username = request.POST['username']
         password = request.POST['password']
         user = auth.authenticate(username=username, password=password)
         if user and user.is_active:
+            print(request.POST)
             auth.login(request, user)
             if 'next' in request.POST:
+                print('here ---', request.GET)
+                print('here is ----', request.POST['next'])
                 return HttpResponseRedirect(request.POST['next'])
             return HttpResponseRedirect(reverse('main'))
 
     content = {
-        'title': 'Enter',
+        'title': 'вход',
         'login_form': login_form,
         'next': next
     }
@@ -45,7 +50,7 @@ def register(request):
         register_form = ShopUserRegisterForm()
 
     content = {
-        'title': 'registration',
+        'title': 'регистрация',
         'form': register_form
     }
 
@@ -62,7 +67,7 @@ def edit(request):
         edit_form = ShopUserEditForm(instance=request.user)
 
     content = {
-        'title': 'edit',
+        'title': 'изменить позьзователя',
         'edit_form': edit_form
     }
 

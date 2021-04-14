@@ -33,7 +33,6 @@ class ShopUserProfile(models.Model):
     )
 
     user = models.OneToOneField(ShopUser, unique=True, null=False, db_index=True, on_delete=models.CASCADE)
-    profile_picture = models.ImageField(upload_to='users_avatars', blank=True)
     tag_line = models.CharField(max_length=128, verbose_name='Тэги', blank=True)
     about_me = models.TextField(verbose_name='о себе', blank=True, max_length=512)
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES, blank=True, verbose_name='пол')

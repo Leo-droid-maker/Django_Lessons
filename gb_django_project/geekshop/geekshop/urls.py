@@ -19,7 +19,11 @@ urlpatterns = [
     path('admin/', include('adminapp.urls', namespace='admin')),
 
     # path('admin/', admin.site.urls),
-    path('control/', admin.site.urls),
+    # path('control/', admin.site.urls),
+
+    path('', include('social_django.urls', namespace='social')),
+
+    path('order/', include('ordersapp.urls', namespace='order'))
 ]
 
 if settings.DEBUG:
